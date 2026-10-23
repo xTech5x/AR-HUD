@@ -1,6 +1,6 @@
 // Offline cache for the app shell. Map tiles and the camera model are fetched live.
 const V = 'hud-v1';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './vendor/maplibre-gl.js', './vendor/maplibre-gl.css'];
+const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './maplibre-gl.js', './maplibre-gl.css'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
